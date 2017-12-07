@@ -12534,30 +12534,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rob\\.nuget\\packages\\": {},
+    "C:\\Users\\RobertBrown\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\source\\ASP.NET-Course\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
+      "projectUniqueName": "c:\\Home-Projects\\Repos\\ASP.NET-Course\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
       "projectName": "OdeToFood",
-      "projectPath": "c:\\source\\ASP.NET-Course\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
-      "packagesPath": "C:\\Users\\Rob\\.nuget\\packages\\",
-      "outputPath": "c:\\source\\ASP.NET-Course\\OdeToFood\\OdeToFood\\obj\\",
+      "projectPath": "c:\\Home-Projects\\Repos\\ASP.NET-Course\\OdeToFood\\OdeToFood\\OdeToFood.csproj",
+      "packagesPath": "C:\\Users\\RobertBrown\\.nuget\\packages\\",
+      "outputPath": "c:\\Home-Projects\\Repos\\ASP.NET-Course\\OdeToFood\\OdeToFood\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rob\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\RobertBrown\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
