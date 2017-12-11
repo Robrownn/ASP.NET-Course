@@ -29,5 +29,16 @@ namespace OdeToFood.Controllers
             // The controller doesn't decide what the result is, just that it does the thing you're telling it to do
             return View(model);
         }
+
+        // This action will be called when the url is structured like "/home/details/<id>"
+        public IActionResult Details(int id)
+        {
+            var model = _restaurantData.Get(id);
+            if (model == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
     }
 }
