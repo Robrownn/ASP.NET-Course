@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Routing;
+using OdeToFood.Services;
 
 namespace OdeToFood
 {
@@ -18,6 +20,7 @@ namespace OdeToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>();
             services.AddMvc();
         }
 
@@ -37,16 +40,28 @@ namespace OdeToFood
 
             app.UseStaticFiles();
 
-            app.UseMvcWithDefaultRoute();
-            
-            app.UseFileServer();
+            app.UseMvc(ConfigureRoutes);
 
             app.Run(async (context) =>
             {
 
                 var greeting = greeter.GetMessageOfTheDay();
-                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName}");
+                context.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync($"Not found");
             });
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            // /home/index/4
+
+
+            // Conventional Routing: 
+            // This route takes a url structured "url.com/controller/action and leads it to that specifc controller and action
+            // By default, if we go to url.com, it will take us to the Home controller's Index action
+            routeBuilder.MapRoute("Default", 
+                "{controller=Home}/{action=Index}/{id?}");
+
         }
     }
 }
