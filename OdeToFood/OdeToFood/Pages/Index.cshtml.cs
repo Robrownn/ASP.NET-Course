@@ -14,22 +14,17 @@ namespace OdeToFood.Pages
     public class IndexModel : PageModel
     {
         private OdeToFoodDBContext _context;
-        private IGreeter _greeter;
 
         public DbSet<Restaurant> Restaurants { get; set; }
-        public string CurrentMessage { get; set; }
 
-        public IndexModel(OdeToFoodDBContext context,
-                          IGreeter greeter)
+        public IndexModel(OdeToFoodDBContext context)
         {
             _context = context;
-            _greeter = greeter;
         }
 
         public void OnGet()
         {
             Restaurants = _context.Restaurants;
-            CurrentMessage = _greeter.GetMessageOfTheDay();
         }
     }
 }
